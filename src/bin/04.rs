@@ -43,13 +43,6 @@ pub fn part_one(input: &str) -> Option<u32> {
 }
 
 fn is_cross_mas(grid: &Vec<Vec<char>>, i: usize, j: usize) -> bool {
-    let height = grid.len();
-    let width = grid[0].len();
-
-    if (i < 1) || (i > height - 2) || (j < 1) || (j > width - 2) {
-        return false;
-    }
-
     let top_left = grid[i-1][j-1];
     let top_right = grid[i-1][j+1];
     let bottom_left = grid[i+1][j-1];
